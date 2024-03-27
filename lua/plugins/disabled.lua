@@ -3,7 +3,6 @@ return {
   { "echasnovski/mini.pairs", enabled = false },
   { "echasnovski/mini.surround", enabled = false },
   { "echasnovski/mini.ai", enabled = false },
-
   -- added numToStr/Comment.nvim to replace the plugins below
   { "echasnovski/mini.comment", enabled = false },
   { "JoosepAlviste/nvim-ts-context-commentstring", enabled = false },
