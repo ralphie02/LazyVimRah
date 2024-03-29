@@ -9,7 +9,7 @@ return {
 
   -- EDITOR
   -- remove and replace with nvim-tree; copy config to nvim-tree if possible
-  -- { "nvim-neo-tree/neo-tree.nvim", enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 
   -- LINTING
   { "mfussenegger/nvim-lint", enabled = false },

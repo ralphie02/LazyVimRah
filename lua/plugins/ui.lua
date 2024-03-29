@@ -1,14 +1,15 @@
-if true then return {} end
+-- if true then return {} end
 
 return {
   -- bufferline
   "akinsho/bufferline.nvim",
+  dependencies = { "nvim-tree/nvim-tree.lua" },
   opts = {
     options = {
       offsets = {
         {
           filetype = "NvimTree",
-          text = "Nvim-tree",
+          text = "NvimTree",
           highlight = "Directory",
           text_align = "left",
         },
