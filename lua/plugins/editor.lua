@@ -10,14 +10,16 @@ return {
       { "<leader>E", "<leader>fE", desc = "Explorer NvimTree (cwd)", remap = true },
     },
     deactivate = function() require("nvim-tree.api").tree.close() end, -- or function() vim.cmd([[NvimTreeClose]]) end
-    init = function()
-      if vim.fn.argc(-1) == 1 then
-        local stat = vim.uv.fs_stat(vim.fn.argv(0))
-        if stat and stat.type == "directory" then
-          require("nvim-tree")
-        end
-      end
-    end,
+    -- Note: Copied from LazyVim config for Neo-tree; commented since it doesn't seem to be necessary
+    --
+    -- init = function()
+    --   if vim.fn.argc(-1) == 1 then
+    --     local stat = vim.uv.fs_stat(vim.fn.argv(0))
+    --     if stat and stat.type == "directory" then
+    --       require("nvim-tree")
+    --     end
+    --   end
+    -- end,
     config = function()
       require("nvim-tree").setup()
     end,
