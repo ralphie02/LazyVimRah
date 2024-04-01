@@ -1,5 +1,4 @@
 -- if true then return {} end
-
 return {
   {
     "nvim-tree/nvim-tree.lua",
@@ -11,14 +10,16 @@ return {
       { "<leader>E", "<leader>fE", desc = "Explorer NvimTree (cwd)", remap = true },
     },
     deactivate = function() require("nvim-tree.api").tree.close() end, -- or function() vim.cmd([[NvimTreeClose]]) end
+    init = function()
+      if vim.fn.argc(-1) == 1 then
+        local stat = vim.uv.fs_stat(vim.fn.argv(0))
+        if stat and stat.type == "directory" then
+          require("nvim-tree")
+        end
+      end
+    end,
     config = function()
-      require("nvim-tree").setup({
-        -- actions = {
-        --   open_file = {
-        --     resize_window = false,
-        --   },
-        -- },
-      })
+      require("nvim-tree").setup()
     end,
   },
 }

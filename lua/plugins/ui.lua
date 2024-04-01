@@ -1,9 +1,7 @@
 -- if true then return {} end
-
 return {
   -- bufferline
   "akinsho/bufferline.nvim",
-  dependencies = { "nvim-tree/nvim-tree.lua" },
   opts = {
     options = {
       offsets = {
