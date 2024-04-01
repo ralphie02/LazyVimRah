@@ -10,6 +10,7 @@ return {
       { "<leader>e", "<leader>fe", desc = "Explorer NvimTree (Root Dir)", remap = true },
       { "<leader>E", "<leader>fE", desc = "Explorer NvimTree (cwd)", remap = true },
     },
+    deactivate = function() require("nvim-tree.api").tree.close() end, -- or function() vim.cmd([[NvimTreeClose]]) end
     config = function()
       require("nvim-tree").setup({
         -- actions = {
