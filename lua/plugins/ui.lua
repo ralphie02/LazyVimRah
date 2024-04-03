@@ -32,8 +32,8 @@ return {
         "DarkerRainbowCyan",
       }
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "DarkerRainbowRed", { fg = "#a4232d" })
         -- https://mdigi.tools/darken-color/#56b6c2 40% darker
+        vim.api.nvim_set_hl(0, "DarkerRainbowRed", { fg = "#a4232d" })
         vim.api.nvim_set_hl(0, "DarkerRainbowYellow", { fg = "#b07f23" })
         vim.api.nvim_set_hl(0, "DarkerRainbowBlue", { fg = "#136db7" })
         vim.api.nvim_set_hl(0, "DarkerRainbowOrange", { fg = "#8f5c2b" })
