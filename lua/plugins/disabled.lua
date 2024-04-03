@@ -7,6 +7,9 @@ return {
   { "echasnovski/mini.comment", enabled = false },
   { "JoosepAlviste/nvim-ts-context-commentstring", enabled = false },
 
+  -- COLORSCHEME
+  { "folke/tokyonight.nvim", enabled = false },
+
   -- EDITOR
   -- remove and replace with nvim-tree; copy config to nvim-tree if possible
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
