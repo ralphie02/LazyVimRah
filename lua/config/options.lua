@@ -14,4 +14,4 @@ opt.regexpengine = 1 -- sourcing <nvim7-install..>/syntax/ruby.vim from ~18ms to
 opt.colorcolumn = "90,100" -- line length guideline
 opt.showbreak = " ↪ " -- show linebreak with arrow ↪
 opt.linebreak = true -- break line on word, not char
--- opt.wrap = true
+-- opt.wrap = true -- toggle with <leader>uw
