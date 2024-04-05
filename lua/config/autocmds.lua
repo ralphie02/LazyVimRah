@@ -9,8 +9,8 @@ end
 vim.api.nvim_create_autocmd("VimEnter", {
   group = augroup("autoupdate"),
   callback = function()
-    if require("lazy.status").has_updates then
-      require("lazy").update({ show = true })
+    if require("lazy.status").has_updates() then
+      require("lazy").update({ show = true, })
     end
   end,
 })
