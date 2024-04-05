@@ -14,3 +14,18 @@ opt.colorcolumn = "90,100" -- line length guideline
 opt.showbreak = " ↪ " -- show linebreak with arrow ↪
 opt.linebreak = true -- break line on word, not char
 -- opt.wrap = true -- toggle with <leader>uw
+
+local function augroup(name)
+  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+end
+
+-- when available, auto update when vim starts
+-- as per discussion here: https://github.com/LazyVim/LazyVim/issues/2592#issuecomment-2015093693
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = augroup("autoupdate"),
+  callback = function()
+    if require("lazy.status").has_updates() then
+      require("lazy").update({ show = true })
+    end
+  end,
+})

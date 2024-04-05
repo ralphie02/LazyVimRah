@@ -57,4 +57,18 @@ return {
       require("nvim-tree").setup(opts)
     end,
   },
+  {
+    "rmagatti/goto-preview",
+    lazy = false,
+    dependencies = {
+      "neovim/nvim-lspconfig"
+    },
+    opts = {
+      default_mappings = true,
+      resizing_mappings = true,
+    },
+    config = function(_, opts)
+      require("goto-preview").setup(opts)
+    end,
+  },
 }

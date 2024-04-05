@@ -6,8 +6,6 @@ return {
       -- https://mason-registry.dev/registry/list
       ensure_installed = {
         "rubocop",
-        "stylua",
-        "shfmt",
       },
     },
   },
