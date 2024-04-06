@@ -59,10 +59,7 @@ return {
   },
   {
     "rmagatti/goto-preview",
-    lazy = false,
-    dependencies = {
-      "neovim/nvim-lspconfig"
-    },
+    event = "VeryLazy",
     opts = {
       default_mappings = true,
       resizing_mappings = true,
