@@ -19,6 +19,4 @@ return {
 
   -- UI
   { "echasnovski/mini.indentscope", enabled = false },
-  { "nvimdev/dashboard-nvim", enabled = false },
-  -- add options for alpha-nvim
 }
