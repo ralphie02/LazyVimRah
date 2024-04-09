@@ -69,4 +69,16 @@ return {
       require("goto-preview").setup(opts)
     end,
   },
+  {
+    "folke/flash.nvim",
+    opts = {
+      modes = {
+        search = {
+          jump = {
+            nohlsearch = false,
+          },
+        },
+      },
+    },
+  }
 }
