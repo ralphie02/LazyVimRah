@@ -5,3 +5,5 @@
 -- Remove keymaps to move lines up/down: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua#L25
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
+
+vim.keymap.set('v', 'y', '"*y') -- v-mode: yank to clipboard;
