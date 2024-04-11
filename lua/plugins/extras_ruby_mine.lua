@@ -35,7 +35,8 @@ return {
       end,
     },
     keys = {
-      { "<leader>te", function() require("dap").repl.open() end, desc = "Debug T(e)rminal" },
+      -- https://github.com/mfussenegger/nvim-dap/blob/master/doc/dap.txt
+      { "<leader>te", function() require("dap").repl.toggle() end, desc = "Debug Toggle" },
       { "<leader>tn", function() require("dap").continue() end,  desc = "Debug Next/Continue" },
     },
   },
