@@ -16,5 +16,13 @@ return {
     opts = {
       current_line_blame = true,
     },
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        file_ignore_patterns = { "%.min%.js" }
+      }
+    },
   }
 }
