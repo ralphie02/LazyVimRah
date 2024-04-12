@@ -65,7 +65,7 @@ return {
 
       local my_catppuccin_frappe = require('lualine.themes.catppuccin-frappe')
       my_catppuccin_frappe.inactive.c = { fg = '#2c323c', bg = 'silver' }
-      my_catppuccin_frappe.normal.c.bg = '#23226c'
+      my_catppuccin_frappe.normal.c.bg = '#2c2b88'
 
       return {
         options = {
