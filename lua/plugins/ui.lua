@@ -93,7 +93,7 @@ return {
               padding = { left = 1, right = 0 },
             },
             { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-            { 'filename', path = 1, padding = 0, buffers_color = { active = "lualine_a_inactive" } },
+            { 'filename', path = 1, padding = 0 },
           },
           lualine_x = {
             -- stylua: ignore
