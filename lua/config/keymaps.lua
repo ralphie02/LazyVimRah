@@ -6,4 +6,4 @@
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 
-vim.keymap.set('v', 'y', '"*y') -- v-mode: yank to clipboard;
+vim.keymap.set('v', 'y', '"+y') -- v-mode: yank to clipboard;
