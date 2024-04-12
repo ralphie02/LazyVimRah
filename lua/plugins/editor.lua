@@ -4,9 +4,10 @@ return {
     opts = {
       modes = {
         search = {
-          jump = {
-            nohlsearch = false,
-          },
+          enabled = false,
+          -- jump = {
+          --   nohlsearch = false,
+          -- },
         },
       },
     },
