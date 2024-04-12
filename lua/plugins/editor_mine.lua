@@ -58,15 +58,15 @@ return {
       require("nvim-tree").setup(opts)
     end,
   },
-  {
-    "rmagatti/goto-preview",
-    event = "VeryLazy",
-    opts = {
-      default_mappings = true,
-      resizing_mappings = true,
-    },
-    config = function(_, opts)
-      require("goto-preview").setup(opts)
-    end,
-  },
+  -- {
+  --   "rmagatti/goto-preview",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     default_mappings = true,
+  --     resizing_mappings = true,
+  --   },
+  --   config = function(_, opts)
+  --     require("goto-preview").setup(opts)
+  --   end,
+  -- },
 }
