@@ -9,8 +9,8 @@ return {
             border = 'rounded',
           },
           peek_definition_code = {
-            ["<leader>fd"] = "@function.outer",
-            ["<leader>fD"] = "@class.outer",
+            ["<leader>cd"] = { query = "@function.outer", desc = "Definition func outer" },
+            ["<leader>cD"] = { query = "@class.outer", desc = "Definition class outer" },
           },
         },
       },
