@@ -1,22 +1,20 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
         "ruby",
-      },
-    },
+      })
+    end,
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      -- https://github.com/williamboman/mason.nvim?tab=readme-ov-file#introduction
-      -- https://mason-registry.dev/registry/list
-      ensure_installed = {
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
         "ruby-lsp",
         "rubocop",
-      },
-    },
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
