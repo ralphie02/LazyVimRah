@@ -11,5 +11,5 @@ local toggle_rspec = [[:lcd `git rev-parse --show-toplevel` | if expand("%:r")[-
   exe "e ".expand("%:h:s?spec?app?")."/".expand("%:t:s?_spec.rb?.rb?") | else |
   exe "e ".expand("%:h:s?app?spec?")."/".expand("%:t:s?.rb?_spec.rb?") | endif
 ]]
-vim.keymap.set('n', '<leader>tf', toggle_rspec, { silent = true, desc = "Toggle test (f)ile" })
+vim.keymap.set('n', '<leader>ti', toggle_rspec, { silent = true, desc = "Toggle Test F(i)le" })
 vim.keymap.set("n", "<leader>ci", vim.diagnostic.open_float, { desc = "Code D(i)agnostics" })
