@@ -34,8 +34,9 @@ return {
     },
     keys = {
       -- https://github.com/mfussenegger/nvim-dap/blob/master/doc/dap.txt
-      { "<leader>te", function() require("dap").repl.toggle() end, desc = "Debug Toggle" },
-      { "<leader>tn", function() require("dap").continue() end,  desc = "Debug Next/Continue" },
+      { "<leader>te", function() require("dap").repl.toggle() end, desc = "DAP Term Toggle" },
+      { "<leader>tn", function() require("dap").continue() end,  desc = "DAP Next/Continue" },
+      { "<leader>tb", function() require("dap").toggle_breakpoint() end,  desc = "DAP Breakpoint Toggle" },
     },
   },
   {
