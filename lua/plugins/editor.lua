@@ -25,5 +25,5 @@ return {
         file_ignore_patterns = { "%.min%.js" }
       }
     },
-  }
+  },
 }

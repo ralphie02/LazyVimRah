@@ -13,3 +13,4 @@ local toggle_rspec = [[:lcd `git rev-parse --show-toplevel` | if expand("%:r")[-
 ]]
 vim.keymap.set('n', '<leader>ti', toggle_rspec, { silent = true, desc = "Toggle Test F(i)le" })
 vim.keymap.set("n", "<leader>ci", vim.diagnostic.open_float, { desc = "Code D(i)agnostics" })
+vim.keymap.set("n", "*", [[:let @/ = '\<'.expand('<cword>').'\>'|set hlsearch<CR>]], { desc = "No jump highlight"}) -- https://superuser.com/a/255120
