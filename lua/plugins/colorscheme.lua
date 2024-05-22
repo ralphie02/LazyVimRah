@@ -8,11 +8,6 @@ return {
         enabled = true,
         percentage = 0.05,
       },
-      integrations = {
-        native_lsp = {
-          enabled = true,
-        },
-      },
     }
   },
   {
