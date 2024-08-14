@@ -7,20 +7,22 @@ return {
       })
     end,
   },
-  {
-    "williamboman/mason.nvim",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "ruby-lsp",
-        "rubocop",
-      })
-    end,
-  },
+  -- seems to be unnecessary??
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = function(_, opts)
+  --     vim.list_extend(opts.ensure_installed, {
+  --       "ruby-lsp",
+  --       "rubocop",
+  --     })
+  --   end,
+  -- },
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
         ruby_lsp = {},
+        rubocop = {},
       },
     },
   },
