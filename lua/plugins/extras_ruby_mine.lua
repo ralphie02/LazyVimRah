@@ -21,7 +21,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        ruby_lsp = {},
+        ruby_lsp = {
+          filetypes = { "ruby" },
+        },
         rubocop = {},
       },
     },
