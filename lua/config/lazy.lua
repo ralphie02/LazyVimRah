@@ -20,7 +20,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 
     -- include copilot
-    { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
     { import = "lazyvim.plugins.extras.test.core" },
     -- import/override with your plugins - should be last since these are my customizations
     { import = "plugins" },
