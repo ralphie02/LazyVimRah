@@ -13,7 +13,9 @@ require("lazy").setup({
     -- import any extras modules here
     --
     -- added then proceeded to disable
-    -- { import = "lazyvim.plugins.extras.lang.ruby" },
+    { import = "lazyvim.plugins.extras.lang.ruby" },
+    { import = "lazyvim.plugins.extras.dap.core" },
+    { import = "lazyvim.plugins.extras.test.core" },
     --
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
@@ -21,7 +23,6 @@ require("lazy").setup({
 
     -- include copilot
     { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-    { import = "lazyvim.plugins.extras.test.core" },
     -- import/override with your plugins - should be last since these are my customizations
     { import = "plugins" },
   },
