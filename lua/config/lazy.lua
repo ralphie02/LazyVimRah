@@ -14,6 +14,7 @@ require("lazy").setup({
     --
     -- added then proceeded to disable
     { import = "lazyvim.plugins.extras.lang.ruby" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.test.core" },
     --
