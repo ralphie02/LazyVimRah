@@ -3,6 +3,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 local g, opt = vim.g, vim.opt
 
+g.snacks_animate = false -- disable annoying animations
 g.autoformat = false -- disable LazyVim autoformat on save
 -- g.loaded_python3_provider = 0
 -- g.loaded_node_provider = 0
@@ -10,7 +11,7 @@ g.autoformat = false -- disable LazyVim autoformat on save
 -- g.ruby_path = vim.fn.system('rbenv prefix') -- github.com/vim-ruby/vim-ruby/issues/248
 
 -- "set regexpengine" == "opt.regexpengine" in case I forget again
-opt.regexpengine = 1 -- sourcing <nvim7-install..>/syntax/ruby.vim from ~18ms to ~9ms
+-- opt.regexpengine = 1 -- sourcing <nvim7-install..>/syntax/ruby.vim from ~18ms to ~9ms
 opt.colorcolumn = "90,100" -- line length guideline
 opt.showbreak = " ↪ " -- show linebreak with arrow ↪
 opt.linebreak = true -- break line on word, not char

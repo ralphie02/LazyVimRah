@@ -2,7 +2,7 @@
 return {
   {
     "nvim-tree/nvim-tree.lua",
-    event = "VeryLazy",
+    -- event = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
       {
@@ -35,14 +35,14 @@ return {
       require("nvim-tree.api").tree.close()
     end, -- or function() vim.cmd([[NvimTreeClose]]) end
     -- Note: Copied from LazyVim config for Neo-tree
-    init = function()
-      if vim.fn.argc(-1) == 1 then
-        local stat = vim.uv.fs_stat(vim.fn.argv(0))
-        if stat and stat.type == "directory" then
-          require("nvim-tree")
-        end
-      end
-    end,
+    -- init = function()
+    --   if vim.fn.argc(-1) == 1 then
+    --     local stat = vim.uv.fs_stat(vim.fn.argv(0))
+    --     if stat and stat.type == "directory" then
+    --       require("nvim-tree")
+    --     end
+    --   end
+    -- end,
     opts = {
       -- https://github.com/nvim-tree/nvim-tree.lua?tab=readme-ov-file#custom-mappings
       on_attach = function(bufnr)

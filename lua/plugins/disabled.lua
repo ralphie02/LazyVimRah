@@ -15,7 +15,7 @@ return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 
   -- LINTING
-  { "mfussenegger/nvim-lint", enabled = false },
+  -- { "mfussenegger/nvim-lint", enabled = false },
 
   -- UI
   { "echasnovski/mini.indentscope", enabled = false },
