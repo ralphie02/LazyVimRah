@@ -62,18 +62,27 @@ return {
 
       vim.o.laststatus = vim.g.lualine_laststatus
 
+      -- MY EDIT: START --
       local my_catppuccin_frappe = require('lualine.themes.catppuccin-frappe')
       my_catppuccin_frappe.inactive.c = { fg = '#2c323c', bg = 'silver' }
       my_catppuccin_frappe.normal.c.bg = '#2c2b88'
+      -- MY EDIT: END --
 
-      return {
+      local opts = {
         options = {
+
+          -- MY EDIT: START --
           theme = my_catppuccin_frappe,
-          globalstatus = false,
-          disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
+          -- MY EDIT: END --
+
+          globalstatus = vim.o.laststatus == 3,
+          disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
+
+          -- MY EDIT: START --
           -- remove separators to get more space; useful when branch and filepaths are long
           component_separators = {},
           section_separators = {},
+          -- MY EDIT: END --
         },
         sections = {
           lualine_a = { "mode" },
@@ -89,36 +98,47 @@ return {
                 info = icons.diagnostics.Info,
                 hint = icons.diagnostics.Hint,
               },
+              -- MY EDIT: START --
               padding = { left = 1, right = 0 },
+              -- MY EDIT: END --
             },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+            -- MY EDIT: START --
             { 'filename', path = 1, padding = 0 },
+            -- MY EDIT: END --
+            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           },
           lualine_x = {
+            Snacks.profiler.status(),
             -- stylua: ignore
-            {
+                        {
               function() return require("noice").api.status.command.get() end,
               cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-              color = LazyVim.ui.fg("Statement"),
+              color = function() return { fg = Snacks.util.color("Statement") } end,
             },
             -- stylua: ignore
             {
               function() return require("noice").api.status.mode.get() end,
               cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-              color = LazyVim.ui.fg("Constant"),
+              color = function() return { fg = Snacks.util.color("Constant") } end,
             },
             -- stylua: ignore
             {
               function() return "  " .. require("dap").status() end,
               cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
-              color = LazyVim.ui.fg("Debug"),
+              color = function() return { fg = Snacks.util.color("Debug") } end,
             },
+            -- stylua: ignore
             {
               require("lazy.status").updates,
               cond = require("lazy.status").has_updates,
-              color = LazyVim.ui.fg("Special"),
+              color = function() return { fg = Snacks.util.color("Special") } end,
             },
+            -- MY EDIT: START --
+            -- moved diff to lualine_y
+            -- MY EDIT: END --
           },
+          -- MY EDIT: START --
+          -- moved lualine_y to lualine_z
           lualine_y = {
             {
               "diff",
@@ -139,10 +159,14 @@ return {
               end,
             },
           },
+          -- MY EDIT: END --
+          -- MY EDIT: START --
+          -- moved lualine_y to lualine_z + removed original lualine_z
           lualine_z = {
             { "progress", separator = " ", padding = { left = 1, right = 0 } },
             { "location", padding = { left = 0, right = 1 } },
           },
+          -- MY EDIT: END --
         },
         inactive_sections = {
           lualine_c = { { 'filename', path = 1 } },

@@ -2,25 +2,25 @@
 return {
   {
     "nvim-tree/nvim-tree.lua",
-    -- event = "VeryLazy",
+    event = "VeryLazy",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
       {
-        "<leader>fe",
+        "<leader>e",
         function()
           require("nvim-tree.api").tree.toggle({ path = LazyVim.root() })
         end,
         desc = "Explorer NvimTree (Root)",
       },
       {
-        "<leader>fE",
+        "<leader>E",
         function()
           require("nvim-tree.api").tree.toggle({ path = vim.uv.cwd() })
         end,
         desc = "Explorer NvimTree (cwd)",
       },
-      { "<leader>e", "<leader>fe", desc = "Explorer NvimTree (Root Dir)", remap = true },
-      { "<leader>E", "<leader>fE", desc = "Explorer NvimTree (cwd)", remap = true },
+      -- { "<leader>e", "<leader>fe", desc = "Explorer NvimTree (Root Dir)", remap = true },
+      -- { "<leader>E", "<leader>fE", desc = "Explorer NvimTree (cwd)", remap = true },
       {
         "<leader>0",
         function()
