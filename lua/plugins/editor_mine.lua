@@ -34,6 +34,15 @@ return {
     deactivate = function()
       require("nvim-tree.api").tree.close()
     end, -- or function() vim.cmd([[NvimTreeClose]]) end
+    -- Note: Copied from LazyVim config for Neo-tree
+    init = function()
+      if vim.fn.argc(-1) == 1 then
+        local stat = vim.uv.fs_stat(vim.fn.argv(0))
+        if stat and stat.type == "directory" then
+          require("nvim-tree")
+        end
+      end
+    end,
     opts = {
       -- https://github.com/nvim-tree/nvim-tree.lua?tab=readme-ov-file#custom-mappings
       on_attach = function(bufnr)
@@ -49,4 +58,15 @@ return {
       require("nvim-tree").setup(opts)
     end,
   },
+  -- {
+  --   "rmagatti/goto-preview",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     default_mappings = true,
+  --     resizing_mappings = true,
+  --   },
+  --   config = function(_, opts)
+  --     require("goto-preview").setup(opts)
+  --   end,
+  -- },
 }
