@@ -5,6 +5,8 @@ local g, opt = vim.g, vim.opt
 
 g.snacks_animate = false -- disable annoying animations
 g.autoformat = false -- disable LazyVim autoformat on save
+g.lazyvim_ruby_lsp = "ruby_lsp"
+g.lazyvim_ruby_formatter = "rubocop"
 -- g.loaded_python3_provider = 0
 -- g.loaded_node_provider = 0
 -- g.loaded_ruby_provider = 0
