@@ -11,6 +11,7 @@ g.lazyvim_ruby_formatter = "rubocop"
 -- g.loaded_node_provider = 0
 -- g.loaded_ruby_provider = 0
 -- g.ruby_path = vim.fn.system('rbenv prefix') -- github.com/vim-ruby/vim-ruby/issues/248
+g.lazyvim_rust_diagnostics = "rust-analyzer"
 
 -- "set regexpengine" == "opt.regexpengine" in case I forget again
 -- opt.regexpengine = 1 -- sourcing <nvim7-install..>/syntax/ruby.vim from ~18ms to ~9ms

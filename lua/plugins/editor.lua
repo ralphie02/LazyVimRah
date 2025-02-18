@@ -26,4 +26,17 @@ return {
   --     }
   --   },
   -- },
+  {
+    "ibhagwan/fzf-lua",
+    opts = {
+      file_ignore_patterns = {
+        "%.min%.js",
+        ".git/",
+        "dist/",
+        "build/",
+        "target/",
+        "node_modules/",
+      },
+    },
+  },
 }
