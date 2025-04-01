@@ -5,4 +5,15 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+  {
+    "saghen/blink.cmp",
+    enabled = true,
+    opts = {
+      keymap = {
+        preset = 'none',
+        ['<C-p>'] = { 'select_prev', 'fallback' },
+        ['<C-n>'] = { 'select_next', 'fallback' },
+      },
+    },
+  },
 }
