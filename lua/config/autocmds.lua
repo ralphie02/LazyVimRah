@@ -20,3 +20,20 @@ vim.api.nvim_create_autocmd("User", {
     -- end)
   end,
 })
+
+local function set_rah_test_dir()
+  if vim.fn.expand("%:e") == "rb" then
+    local test_dirs = { "spec", "test" }
+
+    if not vim.tbl_contains(test_dirs, vim.g.rah_test_dir) then
+      vim.g.rah_test_dir = test_dirs[1] -- Default to spec for Ruby files
+    end
+  else
+    vim.g.rah_test_dir = nil -- Default or unset
+  end
+end
+
+-- Automatically set rah_test_dir when opening a buffer
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  callback = set_rah_test_dir,
+})
