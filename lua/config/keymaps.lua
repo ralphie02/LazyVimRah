@@ -55,3 +55,12 @@ local function toggle_rspec()
   end
 end
 vim.keymap.set('n', '<leader>ti', toggle_rspec, { silent = true, desc = "Toggle Test F(i)le" })
+vim.keymap.set('n', '<leader>tt',
+  function ()
+    vim.fn.setreg("+", "bundle exec rspec " .. vim.fn.expand("%"))
+    local opts = { cwd = LazyVim.root(), interactive = true }
+    local term, _ = Snacks.terminal.get(nil, opts)
+    if term and term.closed == true then
+      Snacks.terminal(nil, opts)
+    end
+  end, { silent = true, desc = "Toggle Test Terminal" })
