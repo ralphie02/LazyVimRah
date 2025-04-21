@@ -60,7 +60,12 @@ vim.keymap.set('n', '<leader>tt',
     vim.fn.setreg("+", "bundle exec rspec " .. vim.fn.expand("%"))
     local opts = { cwd = LazyVim.root(), interactive = true }
     local term, _ = Snacks.terminal.get(nil, opts)
-    if term and term.closed == true then
-      Snacks.terminal(nil, opts)
+
+    if term then
+      if term.closed == true then
+        Snacks.terminal(nil, opts)
+      else
+        term:focus()
+      end
     end
   end, { silent = true, desc = "Toggle Test Terminal" })
