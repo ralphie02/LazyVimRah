@@ -34,6 +34,7 @@ local function set_rah_test_dir()
 end
 
 -- Automatically set rah_test_dir when opening a buffer
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+-- BufHidden triggers callback when ToggleTerm is hidden...fuck ya
+vim.api.nvim_create_autocmd({ "BufEnter", "BufHidden" }, {
   callback = set_rah_test_dir,
 })
