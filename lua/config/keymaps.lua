@@ -40,7 +40,7 @@ local function toggle_rb_spec()
     if vim.fn.expand("%:t"):match("_spec%.rb$") then
       vim.cmd("edit " .. vim.fn.expand("%:h"):gsub(test_dir, "app") .. "/" .. vim.fn.expand("%:t"):gsub("_" .. test_dir .. "%.rb$", ".rb"))
     else
-      vim.cmd("edit " .. vim.fn.expand("%:h"):gsub("app", test_dir) .. "/" .. vim.fn.expand("%:t"):gsub("%.rb$", "_" .. test_dir .. ".rb"))
+      vim.cmd("edit " .. vim.fn.expand("%:h"):gsub("^app", test_dir) .. "/" .. vim.fn.expand("%:t"):gsub("%.rb$", "_" .. test_dir .. ".rb"))
     end
   end
 end
