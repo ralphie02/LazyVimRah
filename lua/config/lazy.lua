@@ -24,6 +24,7 @@ require("lazy").setup({
 
     -- include copilot
     { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     -- import/override with your plugins - should be last since these are my customizations
     { import = "plugins" },
   },
