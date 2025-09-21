@@ -1,10 +1,10 @@
 return {
   -- CODING
-  { "echasnovski/mini.pairs", enabled = false },
-  { "echasnovski/mini.surround", enabled = false },
-  { "echasnovski/mini.ai", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
+  { "nvim-mini/mini.surround", enabled = false },
+  { "nvim-mini/mini.ai", enabled = false },
   -- added numToStr/Comment.nvim to replace the plugins below
-  { "echasnovski/mini.comment", enabled = false },
+  { "nvim-mini/mini.comment", enabled = false },
   { "JoosepAlviste/nvim-ts-context-commentstring", enabled = false },
 
   -- COLORSCHEME
@@ -18,5 +18,5 @@ return {
   -- { "mfussenegger/nvim-lint", enabled = false },
 
   -- UI
-  { "echasnovski/mini.indentscope", enabled = false },
+  { "nvim-mini/mini.indentscope", enabled = false },
 }
