@@ -16,4 +16,7 @@ return {
       },
     },
   },
+  -- avante optional plugins
+  "HakonHarnes/img-clip.nvim",
+  "MeanderingProgrammer/render-markdown.nvim"
 }

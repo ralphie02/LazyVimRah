@@ -1,18 +1,17 @@
 return {
   {
-    -- The plugin is "catppuccin/nvim" but LazyVim calls it "catppuccin"
-    "catppuccin",
+    "catppuccin/nvim",
     opts = {
-      flavour = "frappe",
+      flavour = "macchiato",
       dim_inactive = {
         enabled = true,
-        percentage = 0.05,
+        percentage = 1.75,
       },
-      integrations = {
-        native_lsp = {
-          enabled = false,
-        },
-      },
+    --   integrations = {
+    --     native_lsp = {
+    --       enabled = false,
+    --     },
+    --   },
     }
   },
   {
