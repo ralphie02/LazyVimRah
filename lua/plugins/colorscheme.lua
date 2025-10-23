@@ -5,7 +5,7 @@ return {
       flavour = "macchiato",
       dim_inactive = {
         enabled = true,
-        percentage = 1.75,
+        percentage = 2,
       },
     --   integrations = {
     --     native_lsp = {
