@@ -17,6 +17,16 @@ return {
     },
   },
   -- avante optional plugins
+  {
+    "yetone/avante.nvim",
+    opts = {
+      providers = {
+        copilot = {
+          model = "claude-3.5-sonnet",
+        }
+      },
+    }
+  },
   "HakonHarnes/img-clip.nvim",
   "MeanderingProgrammer/render-markdown.nvim"
 }
