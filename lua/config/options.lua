@@ -21,3 +21,4 @@ opt.linebreak = true -- break line on word, not char
 -- opt.wrap = true -- toggle with <leader>uw
 opt.clipboard = "" -- overwrite LazyVim's "unnamedplus" default
 -- opt.relativenumber = false
+opt.ea = false
