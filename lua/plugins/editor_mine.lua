@@ -53,6 +53,14 @@ return {
         api.config.mappings.default_on_attach(bufnr)
         vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
       end,
+      view = {
+        preserve_window_proportions = true,
+      },
+      actions = {
+        open_file = {
+          resize_window = false,
+        }
+      }
     },
     config = function(_, opts)
       require("nvim-tree").setup(opts)
