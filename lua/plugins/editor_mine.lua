@@ -55,6 +55,13 @@ return {
       end,
       view = {
         preserve_window_proportions = true,
+        -- float = {
+        --   enable = true,
+        --   -- quit_on_focus_loss = false,
+        --   open_win_config = {
+        --     row = math.floor(vim.o.lines * 0.6),
+        --   },
+        -- }
       },
       actions = {
         open_file = {

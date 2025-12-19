@@ -22,7 +22,7 @@ return {
     opts = {
       providers = {
         copilot = {
-          model = "gpt-5",
+          model = "gpt-5-mini",
         }
       },
     }
