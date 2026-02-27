@@ -27,7 +27,7 @@ return {
       },
       rules = {
         project_dir = ".avante/rules",
-        global_dir = "~/.config/avante/rules",
+        global_dir = "~/.config/avante.nvim/rules",
       },
     },
   },
