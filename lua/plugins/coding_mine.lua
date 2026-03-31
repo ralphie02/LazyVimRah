@@ -29,6 +29,12 @@ return {
         project_dir = ".avante/rules",
         global_dir = "~/.config/avante.nvim/rules",
       },
+      windows = {
+        width = 40,
+        ask = {
+          start_insert = false,
+        },
+      },
     },
   },
   "HakonHarnes/img-clip.nvim",
