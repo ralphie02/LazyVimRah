@@ -1,23 +1,25 @@
 return {
-  {
-    "catppuccin/nvim",
-    opts = {
-      flavour = "macchiato",
-      dim_inactive = {
-        enabled = true,
-        percentage = 2,
-      },
-    --   integrations = {
-    --     native_lsp = {
-    --       enabled = false,
-    --     },
-    --   },
-    }
-  },
+  -- {
+  --   "catppuccin/nvim",
+  --   opts = {
+  --     dim_inactive = {
+  --       enabled = true,
+  --       percentage = 2,
+  --     },
+  --   --   integrations = {
+  --   --     native_lsp = {
+  --   --       enabled = false,
+  --   --     },
+  --   --   },
+  --   }
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-macchiato",
+       -- colorscheme = "catppuccin-frappe",
+       -- colorscheme = "catppuccin-latte",
+       -- colorscheme = "catppuccin-mocha",
     }
   },
   -- {
