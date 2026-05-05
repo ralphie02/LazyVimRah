@@ -6,29 +6,17 @@ return {
         enabled = true,
         percentage = 2,
       },
-    --   integrations = {
-    --     native_lsp = {
-    --       enabled = false,
-    --     },
-    --   },
+      integrations = {
+        native_lsp = {
+          enabled = false,
+        },
+      },
     }
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
-       -- colorscheme = "catppuccin-frappe",
-       -- colorscheme = "catppuccin-latte",
-       -- colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin-macchiato", -- "catppuccin-frappe", "catppuccin-latte", "catppuccin-mocha",
     }
   },
-  -- {
-  --   "akinsho/bufferline.nvim",
-  --   init = function()
-  --     local bufline = require("catppuccin.groups.integrations.bufferline")
-  --     function bufline.get()
-  --       return bufline.get_theme()
-  --     end
-  --   end,
-  -- }
 }
