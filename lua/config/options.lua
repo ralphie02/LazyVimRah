@@ -16,7 +16,8 @@ g.lazyvim_rust_diagnostics = "rust-analyzer"
 -- "set regexpengine" == "opt.regexpengine" in case I forget again
 -- opt.regexpengine = 1 -- sourcing <nvim7-install..>/syntax/ruby.vim from ~18ms to ~9ms
 opt.colorcolumn = "90,100" -- line length guideline
-opt.showbreak = " ↪ " -- show linebreak with arrow ↪
+opt.breakindent = true -- force wrapped lines to indent relative to the previous line
+opt.showbreak = "↪ " -- show linebreak with arrow ↪
 opt.linebreak = true -- break line on word, not char
 -- opt.wrap = true -- toggle with <leader>uw
 opt.clipboard = "" -- overwrite LazyVim's "unnamedplus" default
