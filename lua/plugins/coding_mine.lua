@@ -37,6 +37,15 @@ return {
       },
     },
   },
-  "HakonHarnes/img-clip.nvim",
+  {
+    "HakonHarnes/img-clip.nvim",
+    opts = {
+      default = {
+        drag_and_drop = {
+          enabled = false,
+        },
+      },
+    },
+  },
   "MeanderingProgrammer/render-markdown.nvim",
 }
